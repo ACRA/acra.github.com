@@ -1,0 +1,41 @@
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-width: 746px) and (orientation: portrait){
+	#central-content {
+		text-align: center;
+
+	}
+
+	#central-content img, #central-content ul {
+		width: 80%;
+		margin: 1em auto;
+		display: block;
+	}
+
+	#content, .showcase {
+		width: 90%;
+	}
+
+	#checklist {
+		transform: rotate(0);
+		-ms-transform:rotate(0);
+		-moz-transform:rotate(0);
+		-webkit-transform:rotate(0);
+		-o-transform:rotate(0);
+	}
+
+	#checklist2 {
+		transform: rotate(0);
+		-ms-transform:rotate(0);
+		-moz-transform:rotate(0);
+		-webkit-transform:rotate(0);
+		-o-transform:rotate(0);
+	}
+
+
+	.promo {
+		display: block;
+		margin: 1em auto;
+		width: 100%;
+		padding: 1em 0;
+	}
+}

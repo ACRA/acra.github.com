@@ -4,10 +4,11 @@ html {
 }
 
 
-#content, #showcase {
+#content, .showcase {
 	width: 80%;
 	text-align: center;
 	margin: 1em auto 3em auto;
+	padding-bottom: 2em;
 }
 
 #content {
@@ -41,28 +42,25 @@ html {
 
 .note {
 	font-family: 'Swanky and Moo Moo', cursive;
-	font-size: 2em;
+	font-size: 1.8em;
 	list-style: none;
-	width: 25%;
-	margin-top: 23%;
+	width: 29%;
 }
 
 #checklist {
-	float: left;
 	transform: rotate(-7deg);
-	-ms-transform:rotate(-7deg); /* IE 9 */
-	-moz-transform:rotate(-7deg); /* Firefox */
-	-webkit-transform:rotate(-7deg); /* Safari and Chrome */
-	-o-transform:rotate(-7deg); /* Opera */
+	-ms-transform:rotate(-7deg);
+	-moz-transform:rotate(-7deg);
+	-webkit-transform:rotate(-7deg);
+	-o-transform:rotate(-7deg);
 }
 
 #checklist2 {
-	float: right;
 	transform: rotate(7deg);
-	-ms-transform:rotate(7deg); /* IE 9 */
-	-moz-transform:rotate(7deg); /* Firefox */
-	-webkit-transform:rotate(7deg); /* Safari and Chrome */
-	-o-transform:rotate(7deg); /* Opera */
+	-ms-transform:rotate(7deg);
+	-moz-transform:rotate(7deg);
+	-webkit-transform:rotate(7deg);
+	-o-transform:rotate(7deg);
 }
 
 .note li:before {
@@ -70,13 +68,13 @@ html {
 }
 
 img#logo {
-	margin: 5% auto;
+/*	margin: 5% auto;*/
 	background: #f9f9f9;
 	padding: 5%;
 	border-radius: 3em;
 /*	box-shadow: 3px 3px 3px 3px #ccc; */
 	border: solid 3px #ccc;
-	width: 35%;
+	width: 30%;
 }
 
 #intro {
@@ -92,4 +90,13 @@ img#logo {
 	border-radius: 0.5em;
 	background: #f9f9f9;
 	padding: 1em;
+}
+
+#central-content {
+	vertical-align: middle;
+}
+
+#central-content img, #central-content ul {
+	display: inline-block;
+	vertical-align: middle;
 }
