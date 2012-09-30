@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:700|Swanky+and+Moo+Moo|Source+Sans+Pro' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="css/html5reset-1.6.1.css">
-<link rel="stylesheet" type="text/css" href="css/main.css">
-<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<script type="text/javascript" src="js/shjs/sh_main.min.js"></script>
+	<script type="text/javascript" src="js/shjs/sh_java.min.js"></script>
+	<script type="text/javascript" src="js/shjs/sh_xml.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:700|Swanky+and+Moo+Moo|Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/html5reset-1.6.1.css">
+	<link rel="stylesheet" type="text/css" href="css/sh_ide-eclipse.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
 </head>
-<body>
+<body onload="sh_highlightDocument();">
 	<a href="https://github.com/ACRA/acra"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
-	<div id="content">
-		<div id="headline">Know your BUGS.</div>
-		<div id="intro">
-			Building quality apps and getting good reviews depends on your ability to know, understand and fix bugs when your users eperience them.
+	<div class="content">
+		<div class="headline">Know your BUGS.</div>
+		<div class="intro">
+			Building quality Android apps and getting good reviews depends on your ability to know, understand and fix bugs when your users experience them.
 		</div>
 		<div id="central-content">
 			<ul class="note" id="checklist">
-				<li><a href="http://github.com/ACRA/acra/wiki/BasicSetup">Easy to setup</a></li>
+				<li><a href="#setup">Easy to setup</a></li>
+				<li><a href="http://github.com/ACRA/acra/wiki/AdvancedUsage">Highly configurable</a></li>
 				<li>Compatible with ALL Android versions</li>
-				<li>Autonomous</li>
 			</ul>
 
 			<img id="logo" src="img/ACRANewLogo.png"/>
@@ -28,11 +32,61 @@
 				<li>Hypoallergenic</li>
 			</ul>
 		</div>
+		<p>Acra catches exceptions, retrieves <a href="http://github.com/ACRA/acra/wiki/ReportContent">lots of context data</a> and send them to a Google Spreadsheet... or whatever backend you prefer.</p>
 	</div>
-	<div class="showcase">
-		<div class="promo">blah</div>
-		<div class="promo">blah</div>
-		<div class="promo">blah</div>
+	<div class="content">
+		<div class="headline" id="setup">Quick setup</div>
+		<div class="intro">
+			Adding ACRA to your project is a matter of minutes. Its impact on your code is minimal. Below are the minimal setup instructions. For more details see the <a href="http://github.com/ACRA/acra/wiki/BasicSetup">setup instructions</a>.
+		</div>
+		<div class="promo" id="maven">
+			<h1>Maven dependency</h1>
+			<pre class="sh_xml">
+&lt;dependency&gt;
+  &lt;groupId&gt;ch.acra&lt;/groupId&gt;
+  &lt;artifactId&gt;acra&lt;/artifactId&gt;
+  &lt;version&gt;4.3.0&lt;/version&gt;
+&lt;/dependency&gt;
+			</pre>
+		</div>
+		OR
+		<div class="promo" id="maven">
+			<h1>Manual include</h1>
+			<ul>
+				<li><a href="http://search.maven.org/remotecontent?filepath=ch/acra/acra/4.3.0/acra-4.3.0.zip">Download ACRA</a></li>
+				<li>Put the <a href="http://search.maven.org/remotecontent?filepath=ch/acra/acra/4.3.0/acra-4.3.0.jar">.jar</a> in the <pre>libs</pre> subfolder of your Android project</li>
+			</ul>
+		</div>
+		<div class="single promo" id="manifest"><h1>AndroidManifest.xml</h1>
+			<pre class="sh_xml">
+&lt;manifest ...&gt;
+  &lt;application ... android:name="MyApplication"&gt;
+    ...
+  &lt;/application&gt;
+  &lt;uses-permission android:name="android.permission.INTERNET"&gt;
+  &lt;/uses-permission&gt;
+&lt;/manifest&gt;
+			</pre>
+		</div>
+		<div class="single promo" id="java"><h1>Java</h1>
+			<pre class="sh_java">
+import org.acra.*;
+import org.acra.annotation.*;
+
+@ReportsCrashes(formKey = "dGVacG0ydVHnaNHjRjVTUTEtb3FPWGc6MQ") 
+public class MyApplication extends Application {
+  @Override
+  public void onCreate() {
+    // The following line triggers the initialization of ACRA
+    ACRA.init(this);
+    super.onCreate();
+  }
+}			</pre>
+		To get your formKey, import the .csv file provided in <a href="http://search.maven.org/remotecontent?filepath=ch/acra/acra/4.3.0/acra-4.3.0.zip">the package</a> into Google Docs, then create a Form for the resulting spreadsheet. See the <a href="http://github.com/ACRA/acra/wiki/BasicSetup">full setup instructions</a>.
+		</div>
 	</div>
 </body>
+<footer>
+&copy; 2012 <a rel="author" href="https://plus.google.com/105599514712357912650">Kevin Gaudin</a>
+</footer>
 </html>

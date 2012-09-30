@@ -1,18 +1,35 @@
+@media screen and (max-width: 832px) and (orientation: portrait){
+	body {
+		font-size: 90%
+	}
+
+	.content {
+		width: 95%; 
+	}
+
+	#logo {
+		width: 15%;
+	}
+}
+
 /* #### Mobile Phones Portrait #### */
 @media screen and (max-width: 746px) and (orientation: portrait){
+	body {
+		font-size: 80%
+	}
 	#central-content {
 		text-align: center;
 
 	}
 
-	#central-content img, #central-content ul {
-		width: 80%;
+	#central-content ul {
 		margin: 1em auto;
 		display: block;
+		width: 80%;
 	}
 
-	#content, .showcase {
-		width: 90%;
+	#logo {
+		width: 70%;
 	}
 
 	#checklist {
@@ -33,9 +50,10 @@
 
 
 	.promo {
+		width: 90%;
+		font-size: 1.2em;
 		display: block;
 		margin: 1em auto;
-		width: 100%;
-		padding: 1em 0;
+		padding: 1em;
 	}
 }
