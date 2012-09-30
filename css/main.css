@@ -1,13 +1,19 @@
 html {
 	background: #e0e0e0;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
-body {
+
+#content, #showcase {
 	width: 80%;
-	margin: 1em auto;
 	text-align: center;
+	margin: 1em auto 3em auto;
+}
+
+#content {
 	background: #f3f3f3;
 	border-radius: 0 0 1em 1em;
+	-webkit-box-shadow: 5px 5px 3px 3px #cdcdcd;
 	box-shadow: 5px 5px 3px 3px #cdcdcd;
 }
 
@@ -38,6 +44,7 @@ body {
 	font-size: 2em;
 	list-style: none;
 	width: 25%;
+	margin-top: 23%;
 }
 
 #checklist {
@@ -48,8 +55,14 @@ body {
 	-webkit-transform:rotate(-7deg); /* Safari and Chrome */
 	-o-transform:rotate(-7deg); /* Opera */
 }
+
 #checklist2 {
 	float: right;
+	transform: rotate(7deg);
+	-ms-transform:rotate(7deg); /* IE 9 */
+	-moz-transform:rotate(7deg); /* Firefox */
+	-webkit-transform:rotate(7deg); /* Safari and Chrome */
+	-o-transform:rotate(7deg); /* Opera */
 }
 
 .note li:before {
@@ -57,11 +70,26 @@ body {
 }
 
 img#logo {
-	margin: 5em auto;
+	margin: 5% auto;
 	background: #f9f9f9;
-	padding: 3em;
+	padding: 5%;
 	border-radius: 3em;
 /*	box-shadow: 3px 3px 3px 3px #ccc; */
 	border: solid 3px #ccc;
+	width: 35%;
 }
 
+#intro {
+	font-size: 1.5em;
+	clear: both;
+	margin: 2em;
+}
+
+.promo {
+	display: inline-table;
+	width: 33%;
+	border: solid 1px #ccc;
+	border-radius: 0.5em;
+	background: #f9f9f9;
+	padding: 1em;
+}
