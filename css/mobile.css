@@ -1,4 +1,4 @@
-@media screen and (max-width: 832px) and (orientation: portrait), screen and (max-device-width: 832px) and (orientation: portrait){
+@media screen and (max-width: 900px) and (orientation: portrait), screen and (max-device-width: 900px) and (orientation: portrait){
 	body {
 		font-size: 90%
 	}
@@ -13,7 +13,7 @@
 }
 
 /* #### Mobile Phones Portrait #### */
-@media screen and (max-width: 746px) and (orientation: portrait), screen and (max-device-width: 746px) and (orientation: portrait){
+@media screen and (max-width: 800px) and (orientation: portrait), screen and (max-device-width: 800px) and (orientation: portrait){
 	body {
 		font-size: 80%
 	}
