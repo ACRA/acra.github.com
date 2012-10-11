@@ -48,12 +48,4 @@
 		-o-transform:rotate(0);
 	}
 
-
-	.promo {
-		width: 90%;
-		font-size: 1.2em;
-		display: block;
-		margin: 1em auto;
-		padding: 1em;
-	}
 }

@@ -86,14 +86,16 @@ p, .intro {
 }
 
 .promo {
-	display: inline-table;
+	display: block;
  	border: solid 1px #ccc;
 	border-radius: 0.5em;
 	background: #f9f9f9;
 	padding: 1em;
-	margin: 0.25em;
+	margin: 1em auto;
 	text-align: left;
+	width: 90%;
 }
+
 
 .single.promo {
 	display: block;

@@ -38,7 +38,7 @@
 	<div class="content">
 		<div class="headline" id="setup">Quick setup</div>
 		<div class="intro">
-			Adding ACRA to your project is a matter of minutes. Its impact on your code is minimal. Below are the minimal setup instructions. For more details see the <a href="http://github.com/ACRA/acra/wiki/BasicSetup">setup instructions</a>.
+			Adding ACRA to your project is a matter of minutes. Its impact on your code is minimal. Below are the few steps needed to make your app report its crashes. For more details see the <a href="http://github.com/ACRA/acra/wiki/BasicSetup">full setup instructions</a>.
 		</div>
 		<div class="promo" id="maven">
 			<h1>Maven dependency</h1>
@@ -47,8 +47,7 @@
   &lt;groupId&gt;ch.acra&lt;/groupId&gt;
   &lt;artifactId&gt;acra&lt;/artifactId&gt;
   &lt;version&gt;4.3.0&lt;/version&gt;
-&lt;/dependency&gt;
-			</pre>
+&lt;/dependency&gt;</pre>
 		</div>
 		OR
 		<div class="promo" id="maven">
@@ -58,6 +57,7 @@
 				<li>Put the <a href="http://search.maven.org/remotecontent?filepath=ch/acra/acra/4.3.0/acra-4.3.0.jar">.jar</a> in the <pre>libs</pre> subfolder of your Android project</li>
 			</ul>
 		</div>
+		THEN
 		<div class="single promo" id="manifest"><h1>AndroidManifest.xml</h1>
 			<pre class="sh_xml">
 &lt;manifest ...&gt;
@@ -66,8 +66,7 @@
   &lt;/application&gt;
   &lt;uses-permission android:name="android.permission.INTERNET"&gt;
   &lt;/uses-permission&gt;
-&lt;/manifest&gt;
-			</pre>
+&lt;/manifest&gt;</pre>
 		</div>
 		<div class="single promo" id="java"><h1>Java</h1>
 			<pre class="sh_java">
@@ -88,6 +87,6 @@ public class MyApplication extends Application {
 	</div>
 </body>
 <footer>
-&copy; 2012 <a rel="author" href="https://plus.google.com/105599514712357912650?rel=author">Kevin Gaudin</a>
+&copy; 2012 <a rel="author" href="https://plus.google.com/105599514712357912650?rel=author">Kevin Gaudin</a> - <a href="https://plus.google.com/118444843928759726538" rel="publisher">Follow ACRA on Google+</a>
 </footer>
 </html>
