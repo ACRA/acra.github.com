@@ -53,6 +53,7 @@ html {
 	-moz-transform:rotate(-7deg);
 	-webkit-transform:rotate(-7deg);
 	-o-transform:rotate(-7deg);
+	white-space: normal;
 }
 
 #checklist2 {
@@ -61,6 +62,7 @@ html {
 	-moz-transform:rotate(7deg);
 	-webkit-transform:rotate(7deg);
 	-o-transform:rotate(7deg);
+	white-space: normal;
 }
 
 .note li:before {
@@ -102,6 +104,7 @@ p, .intro {
 
 #central-content {
 	vertical-align: middle;
+	white-space: nowrap;
 }
 
 #central-content img, #central-content ul {
