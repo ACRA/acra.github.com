@@ -48,4 +48,13 @@
 		-o-transform:rotate(0);
 	}
 
+	.adsense {
+		display: none;		
+	}
+
+	.adsense.mobile {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+	}
 }

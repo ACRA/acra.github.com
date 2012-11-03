@@ -144,4 +144,14 @@ footer {
 
 footer a {
 	color: #bbb;
+	margin-top: 2em;
+}
+
+.adsense {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.adsense.mobile {
+	display:none;
 }
