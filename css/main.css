@@ -138,7 +138,7 @@ li>pre {
 footer {
 	color: #bbb;
 	text-align: center;
-	margin: 0 auto 1em auto;
+	margin: 1em auto;
 }
 
 footer a {
@@ -153,4 +153,9 @@ footer a {
 
 .adsense.mobile {
 	display:none;
+}
+
+
+div.sdkwidget-wrapper {
+  margin: 0 auto;
 }
