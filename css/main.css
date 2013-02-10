@@ -159,3 +159,13 @@ footer a {
 div.sdkwidget-wrapper {
   margin: 0 auto;
 }
+
+.open, .closed {
+    width: 0.7em;
+    height: 0.7em;
+    margin: 0 0.1em;
+}
+
+.project {
+    white-space: nowrap;
+}

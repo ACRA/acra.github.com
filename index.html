@@ -66,7 +66,7 @@
 &lt;/dependency&gt;</pre>
 		</div>
 		OR
-		<div class="promo" id="maven">
+		<div class="promo">
 			<h1>Manual include</h1>
 			<ul>
 				<li><a href="http://search.maven.org/remotecontent?filepath=ch/acra/acra/4.4.0/acra-4.4.0.zip">Download ACRA</a></li>
@@ -98,8 +98,12 @@ public class MyApplication extends Application {
     super.onCreate();
   }
 }			</pre>
-		To get your formKey, import the .csv file provided in <a href="http://search.maven.org/remotecontent?filepath=ch/acra/acra/4.4.0/acra-4.4.0.zip">the package</a> into Google Docs, then create a Form for the resulting spreadsheet. See the <a href="http://github.com/ACRA/acra/wiki/BasicSetup">full setup instructions</a>.
-		<p>Other backends include: <a target="_blank" href="http://www.bugsense.com/docs/android#acra">Bugsense</a>, <a target="_blank" href="https://www.zubhium.com/docs/crashreporting/">Zubhium</a>, <a target="_blank" href="http://support.hockeyapp.net/kb/client-integration-android/how-to-use-acra-with-hockeyapp">HockeyApp</a>... Or <a href="https://github.com/ACRA/acra/wiki/AdvancedUsage#wiki-Implementing_your_own_sender">you can code your own!</a></p>
+		    To get your formKey, import the .csv file provided in <a href="http://search.maven.org/remotecontent?filepath=ch/acra/acra/4.4.0/acra-4.4.0.zip">the package</a> into Google Docs, then create a Form for the resulting spreadsheet. See the <a href="http://github.com/ACRA/acra/wiki/BasicSetup">full setup instructions</a>.
+		    <div class="alert">
+                <p>Since the <a href="https://plus.google.com/118444843928759726538/posts/GTTgsrEQdN6">recent update of Google Forms by Google</a>, the usage of Google Docs as a storage engine for ACRA reports is becoming deprecated.</p>
+                <p>Thus we launched <span class="project"><img class="open" src="img/opensource.svg" alt="Open source" title="Open source"><a href="http://github.com/ACRA/acralyzer"><strong>Acralyzer</strong></a></span>, an open source backend reports analysis webapp built on a full open stack.</p>
+            </div>
+            <p>Other backends include: <span class="project"><img class="open" src="img/opensource.svg" alt="Open source" title="Open source"><a href="http://code.google.com/p/acra-reporter" target="_blank">ACRA Reporter</a></span>, <span class="project"><img class="closed" src="img/closedsource.svg" alt="Closed source" title="Closed source"><a target="_blank" href="http://www.bugsense.com/docs/android#acra">Bugsense</a></span>, <span class="project"><img class="closed" src="img/closedsource.svg" alt="Closed source" title="Closed source"><a target="_blank" href="https://www.zubhium.com/docs/crashreporting/">Zubhium</a></span>, <span class="project"><img class="closed" src="img/closedsource.svg" alt="Closed source" title="Closed source"><a target="_blank" href="http://support.hockeyapp.net/kb/client-integration-android/how-to-use-acra-with-hockeyapp">HockeyApp</a></span>... Or <a href="https://github.com/ACRA/acra/wiki/AdvancedUsage#wiki-Implementing_your_own_sender">you can code your own!</a></p>
 		</div>
 	</div>
 	<div class='appbrain_sdkwidget' id='sdkwidget' data-format='large' data-counts='true'>
