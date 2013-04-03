@@ -94,8 +94,8 @@ public class MyApplication extends Application {
   @Override
   public void onCreate() {
     // The following line triggers the initialization of ACRA
-    ACRA.init(this);
     super.onCreate();
+    ACRA.init(this);
   }
 }			</pre>
 		    To get your formKey, import the .csv file provided in <a href="http://search.maven.org/remotecontent?filepath=ch/acra/acra/4.4.0/acra-4.4.0.zip">the package</a> into Google Docs, then create a Form for the resulting spreadsheet. See the <a href="http://github.com/ACRA/acra/wiki/BasicSetup">full setup instructions</a>.
