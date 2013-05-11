@@ -89,7 +89,7 @@
 import org.acra.*;
 import org.acra.annotation.*;
 
-@ReportsCrashes(formKey = "dGVacG0ydVHnaNHjRjVTUTEtb3FPWGc6MQ") 
+@ReportsCrashes(formKey = "", formUri = "http://www.yourselectedbackend.com/reportpath)
 public class MyApplication extends Application {
   @Override
   public void onCreate() {
@@ -98,7 +98,8 @@ public class MyApplication extends Application {
     ACRA.init(this);
   }
 }			</pre>
-		    To get your formKey, import the .csv file provided in <a href="http://search.maven.org/remotecontent?filepath=ch/acra/acra/4.5.0/acra-4.5.0.zip">the package</a> into Google Docs, then create a Form for the resulting spreadsheet. See the <a href="http://github.com/ACRA/acra/wiki/BasicSetup">full setup instructions</a>.
+		    The formKey parameter was used for the <a href="https://github.com/ACRA/acra/wiki/Notice-on-Google-Form-Spreadsheet-usage">now deprecated GoogleDocs Forms backend</a>. It is still required but not
+            used anymore.
 		    <div class="alert">
                 <p>Since the <a href="https://plus.google.com/118444843928759726538/posts/GTTgsrEQdN6">recent update of Google Forms by Google</a>, the usage of Google Docs as a storage engine for ACRA reports is becoming deprecated.</p>
                 <p>Thus we launched <span class="project"><img class="open" src="img/opensource.svg" alt="Open source" title="Open source"><a href="http://github.com/ACRA/acralyzer"><strong>Acralyzer</strong></a></span>, an open source backend reports analysis webapp built on a full open stack.</p>
