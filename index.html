@@ -41,7 +41,6 @@
 </head>
 <body onload="sh_highlightDocument();">
 	<span class="donate">
-        <a href='http://www.pledgie.com/campaigns/18789'><img alt='Click here to lend your support to: ACRA - Application Crash Reports for Android and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/18789.png?skin_name=chrome' border='0' /></a>
         <a class="FlattrButton" style="display:none;"
            title="ACRA - Application Crash Reports for Android"
            data-flattr-uid="kevingaudin"
@@ -61,9 +60,8 @@
 		</div>
 		<div id="central-content">
 			<ul class="note" id="checklist">
-				<li><a href="#setup">Easy to setup</a></li>
+				<li><a href="http://github.com/ACRA/acra/wiki/BasicSetup">Easy to setup</a></li>
 				<li><a href="http://github.com/ACRA/acra/wiki/AdvancedUsage">Highly configurable</a></li>
-				<li>Compatible with ALL Android versions</li>
 			</ul>
 
 			<img id="logo" src="img/ACRANewLogo.png"/>
@@ -81,61 +79,10 @@
 		<h1 class="headline" id="setup">Quick setup</h1>
 		<div class="intro">
 			Adding ACRA to your project is a matter of minutes. Its impact on your code is minimal.<br/>
-			Below are the few steps needed to make your app report its crashes.<br/>
-			For more details see the <a href="http://github.com/ACRA/acra/wiki/BasicSetup">full setup instructions</a>.
+			Find the few steps needed to make your app report its crashes <a href="http://github.com/ACRA/acra/wiki/BasicSetup">here</a>.
 		</div>
 		<div class="intro">
-			You can find the latest version of ACRA  by searching <a href="http://search.maven.org/#search%7Cga%7C1%7Cch.acra">Maven Central</a>.
-		</div>
-		<div class="promo" id="maven">
-			<h1>Maven dependency</h1>
-			<pre class="sh_xml">
-&lt;dependency&gt;
-  &lt;groupId&gt;ch.acra&lt;/groupId&gt;
-  &lt;artifactId&gt;acra&lt;/artifactId&gt;
-  &lt;version&gt;[latest version]&lt;/version&gt;
-&lt;/dependency&gt;</pre>
-		</div>
-		OR
-		<div class="promo">
-			<h1>Manual include</h1>
-			<ul>
-				<li><a href="http://search.maven.org/#search%7Cga%7C1%7Cch.acra">Download ACRA</a></li>
-				<li>Put the ACRA AAR in the <pre>libs</pre> subfolder of your Android project</li>
-			</ul>
-		</div>
-		THEN
-		<div class="single promo" id="manifest"><h1>AndroidManifest.xml</h1>
-			<pre class="sh_xml">
-&lt;manifest ...&gt;
-  &lt;application ... android:name="MyApplication"&gt;
-    ...
-  &lt;/application&gt;
-  &lt;uses-permission android:name="android.permission.INTERNET"&gt;
-  &lt;/uses-permission&gt;
-&lt;/manifest&gt;</pre>
-		</div>
-		<div class="single promo" id="java"><h1>Java</h1>
-			<pre class="sh_java">
-import org.acra.*;
-import org.acra.annotation.*;
-
-@ReportsCrashes(formUri = "http://www.yourselectedbackend.com/reportpath")
-public class MyApplication extends Application {
-  @Override
-  public void onCreate() {
-    // The following line triggers the initialization of ACRA
-    super.onCreate();
-    ACRA.init(this);
-  }
-}			</pre>
-		    <div class="alert">
-                <p>Since the <a href="https://plus.google.com/118444843928759726538/posts/GTTgsrEQdN6"  target="_blank">recent update of Google Forms by Google</a>, the usage of Google Docs as a storage engine for ACRA reports is now deprecated.</p>
-                <p>Thus we launched <span class="project"><img class="open" src="img/opensource.svg" alt="Open source" title="Open source"><a href="http://github.com/ACRA/acralyzer"><strong>Acralyzer</strong></a></span>, an open source backend reports analysis webapp built on a full open stack.</p>
-                <p><a href="https://github.com/ACRA/acralyzer/wiki/setup">Installing Acralyzer is now really simple</a>. The only server-side requirement is <a href="http://couchdb.apache.org" target="_blank">Apache CouchDB</a>. You can host it on your own server or use the free hosting services of <a href="http://www.cloudant.com" target="_blank">Cloudant</a> or <a href="http://www.iriscouch.com" target="_blank">Iriscouch</a></p>
-                <p>For an overview of its features go have a look to <a href="https://github.com/ACRA/acralyzer/wiki/usermanual" target="_blank">the user manual</a>.</p>
-            </div>
-            <p><a href="https://github.com/ACRA/acra/wiki/Backends"  target="_blank">Other backends</a> include: <span class="project"><img class="open" src="img/opensource.svg" alt="Open source" title="Open source"><a href="http://code.google.com/p/acra-reporter" target="_blank">ACRA Reporter</a></span>,<span class="project"><img class="closed" src="img/closedsource.svg" alt="Closed source" title="Closed source"><a target="_blank" href="http://www.tracepot.com/">Tracepot</a></span>, <span class="project"><img class="closed" src="img/closedsource.svg" alt="Closed source" title="Closed source"><a target="_blank" href="https://mint.splunk.com/">Splunk Mint Express</a></span>, <span class="project"><img class="closed" src="img/closedsource.svg" alt="Closed source" title="Closed source"><a target="_blank" href="https://www.vessel.io/">Vessel</a></span>, <span class="project"><img class="closed" src="img/closedsource.svg" alt="Closed source" title="Closed source"><a target="_blank" href="http://support.hockeyapp.net/kb/client-integration-android/how-to-use-acra-with-hockeyapp">HockeyApp</a></span>... Or <a href="https://github.com/ACRA/acra/wiki/AdvancedUsage#wiki-Implementing_your_own_sender">you can code your own!</a></p>
+			You can find the latest version of ACRA  by searching <a href="http://search.maven.org/#search%7Cga%7C1%7Cch.acra">Maven Central</a> or <a href="https://bintray.com/acra/maven/ACRA">JCenter</a>.
 		</div>
 	</div>
 	<div class='appbrain_sdkwidget' id='sdkwidget' data-format='large' data-counts='true'>
