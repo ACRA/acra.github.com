@@ -1,1 +1,30 @@
-function show(a){for(var t in count=0,methods){var e=document.getElementById(t);0!=(methods[t]&a)?(e.style.display="",e.className=count++%2?rowColor:altColor):e.style.display="none"}updateTabs(a)}function updateTabs(a){for(var t in tabs){var e=document.getElementById(tabs[t][0]),s=e.firstChild;t==a?(e.className=activeTableTab,s.innerHTML=tabs[t][1]):(e.className=tableTab,s.innerHTML='<a href="javascript:show('+t+');">'+tabs[t][1]+"</a>")}}
+function show(type)
+{
+    count = 0;
+    for (var key in methods) {
+        var row = document.getElementById(key);
+        if ((methods[key] &  type) != 0) {
+            row.style.display = '';
+            row.className = (count++ % 2) ? rowColor : altColor;
+        }
+        else
+            row.style.display = 'none';
+    }
+    updateTabs(type);
+}
+
+function updateTabs(type)
+{
+    for (var value in tabs) {
+        var sNode = document.getElementById(tabs[value][0]);
+        var spanNode = sNode.firstChild;
+        if (value == type) {
+            sNode.className = activeTableTab;
+            spanNode.innerHTML = tabs[value][1];
+        }
+        else {
+            sNode.className = tableTab;
+            spanNode.innerHTML = "<a href=\"javascript:show("+ value + ");\">" + tabs[value][1] + "</a>";
+        }
+    }
+}
